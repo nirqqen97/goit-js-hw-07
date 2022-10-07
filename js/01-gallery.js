@@ -21,7 +21,6 @@ refs.galleryRef.insertAdjacentHTML("afterbegin",gallyryMarkUp)
         </a>
       </div>`
 })    
-// large-image.jpg обязательно надо добавить в хреф
 .join('');
 }
 // ----------------------------------------1111-------------------------------
@@ -36,10 +35,15 @@ function test(evt) {
     if (evt.key === "Escape") {
         // document.removeEventListener()
         box.close()
-        document.removeEventListener('keydown',test)
+        document.removeEventListener('keydown',test);
+        return
+        
     }
+
     console.log(evt)
+    
 }
+
 const box = basicLightbox.create(`
 	<img width="800" height="600" src="${evt.target.dataset.source}">
 `)
